@@ -9,30 +9,27 @@
   margin-bottom: auto;
 
   .profession {
-  text-align: center;
-  font-size: 16px;
-  background-color: red;
+    text-align: center;
+    font-size: 16px;
   }
 
   .title {
-  color: $title-text-color;
-  text-align: center;
-  font-size: 16px;
+    color: $title-text-color;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  > .item {
+    background-color: $primary-white-color;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 1px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 0px 0px 4px 4px;
   }
 
   .item + .item {
-  margin-left: 30px;
+    margin-left: 30px;
   }
 }
-
-
-
- .team-list > .item {
-  background-color: $primary-white-color;
-  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 1px 3px rgba(0, 0, 0, 0.12);
-  border-radius: 0px 0px 4px 4px;
-
 
 .social-network-list {
   display: flex;
@@ -43,24 +40,25 @@
   margin-bottom: 24px;
 
   .item + .item {
-  margin-left: 10px;
+    margin-left: 10px;
   }
 
   .background-social-network {
-  fill: $secondary-color;
-  width: 44px;
-  height: 44px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  transition: fill 250ms $timing-function,
-  background-color 250ms $timing-function;
+    fill: $secondary-color;
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: fill 250ms $timing-function,
+      background-color 250ms $timing-function;
 
-&:hover, &:focus {
-  fill: $primary-white-color;
-  background-color: $accent-color;
-  outline: none;
-   }
+    &:hover,
+    &:focus {
+      fill: $primary-white-color;
+      background-color: $accent-color;
+      outline: none;
+    }
   }
 }
