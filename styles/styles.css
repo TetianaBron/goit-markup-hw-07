@@ -239,8 +239,8 @@ h2 {
     color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
 }
 
-button:hover,
-button:focus {
+.button-filters:hover,
+.button-filters:focus {
   cursor: pointer;
   background-color: var(--accent-color);
   color: var(--primary-white-color);
@@ -348,7 +348,7 @@ button:focus {
 /* Team */
 
 .team-background {
-  background-color: #e5e5e5;
+  background-color: var(--accent-grey);
 }
 
 .team-list .title {
