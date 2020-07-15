@@ -3,96 +3,93 @@
 }
 
 .nav-address {
-  display: flex;
-  align-items: center;
+  @extend %flex-item-centered;
 
   .logo-header {
-  color: black;
-  font-family: $font-logo;
-  font-size: 26px;
-  font-weight: bold;
-  
-  .logo-web {
-  color: $accent-color;
-      }
-   }
+    color: black;
+    font-family: $font-logo;
+    font-size: 26px;
+    font-weight: bold;
+
+    .logo-web {
+      color: $accent-color;
+    }
+  }
 }
 
 .site-nav {
-  display: flex;
-  align-items: center;
+  @extend %flex-item-centered;
   margin-left: 85px;
 
   .item .current::after {
-   position: absolute;
+    position: absolute;
 
-   height: 4px;
-   width: 100%;
+    height: 4px;
+    width: 100%;
 
-   left: 0;
-   bottom: 0;
-   display: block;
-   content: "";
-   background-color: $accent-color;
-   border-radius: 2px;
+    left: 0;
+    bottom: 0;
+    display: block;
+    content: "";
+    background-color: $accent-color;
+    border-radius: 2px;
 
-   opacity: 1;
-  }  
+    opacity: 1;
+  }
 
   .item .nav-link {
-  position: relative;
-  display: inline-flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  color: $title-text-color;
-  font-weight: 500;
-  transition: color 250ms $timing-function;
+    position: relative;
+    display: inline-flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: $title-text-color;
+    font-weight: 500;
+    transition: color $transition-values;
 
-   &:hover,
-   &:focus {
-     color: $accent-color;
+    &:hover,
+    &:focus {
+      color: $accent-color;
     }
   }
 
   .item .current {
-     color: $accent-color;
+    color: $accent-color;
   }
 
   .item + .item {
-  margin-left: 52px;
+    margin-left: 52px;
   }
 }
 
 .address {
-  display: flex;
-  align-items: center;
+  @extend %flex-item-centered;
   margin-left: auto;
 
   .item .icon-header {
-  fill: currentColor;
-  margin-right: 10px;
-  transition: fill 250ms $timing-function;
+    fill: currentColor;
+    margin-right: 10px;
+    transition: fill $transition-values;
   }
 
   .item .icon-header:hover {
-  fill: $accent-color;
+    fill: $accent-color;
   }
 
-   .item + .item {
-   margin-left: 30px;
-   }
+  .item + .item {
+    margin-left: 30px;
+  }
 
-   .link {
-   padding-top: 32px;
-   padding-bottom: 32px;
-   font-style: inherit;
-   letter-spacing: 0.02em;
-   font-weight: 500;
-   transition: color 250ms $timing-function;
+  .link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-style: inherit;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    transition: color $transition-values;
 
-   &:hover,
-   &:focus {
-   color: $accent-color;
-   }
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
   }
 }

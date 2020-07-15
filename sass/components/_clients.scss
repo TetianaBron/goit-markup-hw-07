@@ -1,20 +1,18 @@
 .clients-list {
-  display: flex;
-  align-items: center;
+  @extend %flex-item-centered;
   padding-left: 0px;
   margin-top: auto;
   margin-bottom: auto;
 
   .item .clients-logos {
-    display: flex;
+    @extend %flex-item-centered;
     justify-content: center;
-    align-items: center;
     border: solid 1px $secondary-color;
     border-radius: 4px;
     width: 170px;
     height: 90px;
     fill: $secondary-color;
-    transition: fill 250ms $timing-function, border 250ms $timing-function;
+    transition: fill $transition-values, border $transition-values;
 
     &:hover,
     &:focus {

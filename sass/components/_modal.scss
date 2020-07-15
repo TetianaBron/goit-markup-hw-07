@@ -1,7 +1,7 @@
 .backdrop {
   position: fixed;
   transform: scale(1);
-  transition: opacity 250ms $timing-function;
+  transition: opacity $transition-values;
   opacity: 1;
   top: 0;
   left: 0;
@@ -33,7 +33,7 @@
 
   transform: translate(-50%, -50%) scale(1);
 
-  transition: transform 250ms $timing-function;
+  transition: transform $transition-values;
 
   .button-close {
     position: absolute;
@@ -91,7 +91,7 @@
     left: 40px;
     transform: translate(0, -50%);
 
-    transition: transform 250ms $timing-function;
+    transition: transform $transition-values;
 
     .form-input:focus + &,
     .form-input:not(:placeholder-shown) + & {
@@ -106,7 +106,7 @@
     left: 60px;
     transform: translate(0, -50%);
 
-    transition: transform 250ms $timing-function;
+    transition: transform $transition-values;
   }
 
   .icon-form {
@@ -118,10 +118,10 @@
 
     display: inline-block;
     fill: $title-text-color;
+  }
 
-    .form-input:focus ~ & {
-      fill: $accent-color;
-    }
+  .form-input:focus ~ .icon-form {
+    fill: $accent-color;
   }
 
   textarea {
@@ -149,9 +149,8 @@
 }
 
 .agree {
-  display: flex;
+  @extend %flex-item-centered;
   justify-content: center;
-  align-items: center;
 
   margin-bottom: 30px;
 
